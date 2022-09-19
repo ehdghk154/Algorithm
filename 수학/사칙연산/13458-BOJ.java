@@ -1,5 +1,5 @@
 /**
- * 13458 ½ÃÇè °¨µ¶
+ * 13458 시험 감독
  */
 import java.io.*;
 import java.util.StringTokenizer;
