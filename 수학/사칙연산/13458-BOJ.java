@@ -1,5 +1,5 @@
 /**
- * 13458 ½ÃÇè °¨µ¶
+ * 13458 Â½ÃƒÃ‡Ã¨ Â°Â¨ÂµÂ¶
  */
 import java.io.*;
 import java.util.StringTokenizer;
@@ -11,7 +11,7 @@ public class Main {
     int N = Integer.parseInt(br.readLine());
     long count = N;
     int[] A = new int[N];
-    
+     
     st = new StringTokenizer(br.readLine());
     for(int i = 0; i < N; i++) {
       A[i] = Integer.parseInt(st.nextToken());
