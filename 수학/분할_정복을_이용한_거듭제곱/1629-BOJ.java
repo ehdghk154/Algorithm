@@ -25,7 +25,7 @@ public class Main {
     if(exp % 2 == 1) { 
       // B가 홀수인 경우, A^B % C = A^(B/2) * A^(B/2) * A % C
       // A^(B/2) * A^(B/2) * A 부분이 long형(2^63-1)에 저장하기에도 너무 큰 수이므로
-      // 나머지 분배법칙으로 (A^(B/2) * A^(B/2)) % C * A % C 형태로 계산
+      // 나머지  분배법칙으로 (A^(B/2) * A^(B/2)) % C * A % C 형태로 계산
       return (temp * temp) % c * a % c;
     }
     
