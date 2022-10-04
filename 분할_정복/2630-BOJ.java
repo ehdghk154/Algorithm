@@ -6,11 +6,11 @@ import java.util.StringTokenizer;
 
 public class Main {
   static int[][] arr;
-  static int N, blueCnt, whiteCnt;
+  static int blueCnt, whiteCnt;
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     StringTokenizer st;
-    N = Integer.parseInt(br.readLine());
+    int N = Integer.parseInt(br.readLine());
     arr = new int[N][N];
     blueCnt = 0;
     whiteCnt = 0;
