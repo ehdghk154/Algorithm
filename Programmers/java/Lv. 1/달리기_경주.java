@@ -1,6 +1,11 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 달리기 경주 (Lv. 1)
+ * https://school.programmers.co.kr/learn/courses/30/lessons/178871
+ */
+
 class Solution {
     public String[] solution(String[] players, String[] callings) {
         Map<String, Integer> map = new HashMap<>();
