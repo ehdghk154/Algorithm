@@ -18,6 +18,7 @@ class Solution {
         		// 26으로 나눈 나머지를 'a'나 'A'에 더한다.
         		// word[i]에서 'a'나 'A'를 빼면 (1~26)+n으로 계산할 수 있다.
         		answer += (char)((word[i]-'a'+n)%26 + 'a');
+        	// 알파벳이 대문자일 경우
         	}else {
         		answer += (char)((word[i]-'A'+n)%26 + 'A');
         	}
