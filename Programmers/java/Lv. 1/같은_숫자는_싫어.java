@@ -1,6 +1,6 @@
 /**
- * 나누어 떨어지는 숫자 배열(Lv. 1) 
- * https://school.programmers.co.kr/learn/courses/30/lessons/12910
+ * 같은 숫자는 싫어(Lv. 1) 
+ * https://school.programmers.co.kr/learn/courses/30/lessons/12906
  */
 
 import java.util.*;
