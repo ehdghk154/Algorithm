@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class Solution {
+class Solution {
     public int solution(int[] people, int limit) {
         int answer = 0;
         // 역순 정렬을 위한 객체로 변환(int to Integer)
