@@ -5,7 +5,7 @@
 
 import java.util.Arrays;
 
-public class Solution {
+class Solution {
     public boolean solution(String[] phone_book) {
         boolean answer = true;
         
