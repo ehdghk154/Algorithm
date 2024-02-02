@@ -9,15 +9,15 @@ import java.util.Queue;
 class Solution {
     public int solution(int[] queue1, int[] queue2) {
         int answer = -2;
-        Queue<Long> q1 = new LinkedList<>();
-        Queue<Long> q2 = new LinkedList<>();
+        Queue<Integer> q1 = new LinkedList<>();
+        Queue<Integer> q2 = new LinkedList<>();
         long sum1 = 0, sum2 = 0; // 각 큐의 합
         
-        for(long num : queue1) {
+        for(int num : queue1) {
         	q1.offer(num);
         	sum1 += num;
         }
-        for(long num : queue2) {
+        for(int num : queue2) {
         	q2.offer(num);
         	sum2 += num;
         }
@@ -27,7 +27,7 @@ class Solution {
         return answer;
     }
     
-    static int isSame(Queue<Long> q1, Queue<Long> q2, long sum1, long sum2) {
+    static int isSame(Queue<Integer> q1, Queue<Integer> q2, long sum1, long sum2) {
         int count = 0; // 추출과 추가 작업의 횟수
         int limit = q1.size()*2 + 1; // 최대 작업 횟수
         /**
@@ -85,12 +85,12 @@ class Solution {
             
             // 절반보다 크면 추출 및 추가
         	if(sum1 > half) {
-        		long num = q1.poll();
+        		int num = q1.poll();
         		q2.offer(num);
         		sum1 -= num;
         		sum2 += num;
         	}else {
-        		long num = q2.poll();
+        		int num = q2.poll();
         		q1.offer(num);
         		sum1 += num;
         		sum2 -= num;
