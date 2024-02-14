@@ -23,14 +23,16 @@ class Solution {
 			3의 배수 관련 로직을 작성하면
 			n값을 3으로 나눈 나머지가 0이면 4로 처리 후
 			몫에 -1을 하고 계산하면 해당 값이 나옴
+			(3의 배수 외 다른 값의 몫에 -1해서 계산해도 틀리지 않음)
          */
         while(n > 0) {
         	int t = n % 3;
-        	if(t == 0)
+        	if(t == 0) {
         		sb.append(4);
-        	else
+        		n -= 1;
+        	}else
         		sb.append(t);
-        	n = (n-1) / 3;
+        	n /= 3;
         }
         
         answer = sb.reverse().toString();
