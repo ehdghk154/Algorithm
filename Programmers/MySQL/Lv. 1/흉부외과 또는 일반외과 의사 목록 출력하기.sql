@@ -1,4 +1,3 @@
-
 /**
  * 흉부외과 또는 일반외과 의사 목록 출력하기(Lv. 1)
  * https://school.programmers.co.kr/learn/courses/30/lessons/132203
