@@ -11,5 +11,5 @@ FROM
     PRODUCT
 GROUP BY --제품코드 앞 2자리가 같은 것 끼리 묶음
     LEFT(PRODUCT_CODE, 2)
-ORDER BY --제품코드 앞 2자리로 내림차순 정렬
+ORDER BY --제품코드 앞 2자리로 오름차순 정렬
     LEFT(PRODUCT_CODE, 2)
