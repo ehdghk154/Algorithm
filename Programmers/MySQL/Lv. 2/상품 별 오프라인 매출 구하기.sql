@@ -1,0 +1,25 @@
+/**
+ * 
+ * 상품 별 오프라인 매출 구하기(Lv. 2)
+ * https://school.programmers.co.kr/learn/courses/30/lessons/131533
+ */
+--JOIN 테이블 USING(컬럼)
+SELECT 
+	PRODUCT_CODE, PRICE*SUM(SALES_AMOUNT) AS SALES
+FROM 
+	PRODUCT JOIN OFFLINE_SALE USING(PRODUCT_ID)
+GROUP BY 
+	PRODUCT_CODE
+ORDER BY 
+	SALES DESC, PRODUCT_CODE
+	
+---------------------------------------------------------
+--JOIN 테이블 ON 컬럼1 = 컬럼2 	
+SELECT 
+	PRODUCT_CODE, PRICE*SUM(SALES_AMOUNT) AS SALES
+FROM 
+	PRODUCT A JOIN OFFLINE_SALE B ON A.PRODUCT_ID = B.PRODUCT_ID
+GROUP BY 
+	PRODUCT_CODE
+ORDER BY 
+	SALES DESC, PRODUCT_CODE
