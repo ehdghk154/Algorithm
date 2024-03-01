@@ -17,3 +17,21 @@ WHERE
     AND A.CATEGORY IN('과자', '국', '김치', '식용유')
 ORDER BY 
 	PRICE DESC
+	
+---------------------------------------------------------
+-- WITH 절 사용
+WITH MXP AS (SELECT CATEGORY, MAX(PRICE) AS PRICE 
+          FROM FOOD_PRODUCT 
+          GROUP BY CATEGORY)
+          
+SELECT 
+	A.CATEGORY, A.PRICE, A.PRODUCT_NAME
+FROM 
+	FOOD_PRODUCT AS A 
+    JOIN MXP AS B
+WHERE 
+	A.CATEGORY = B.CATEGORY 
+    AND A.PRICE = B.PRICE
+    AND A.CATEGORY IN('과자', '국', '김치', '식용유')
+ORDER BY 
+	PRICE DESC
