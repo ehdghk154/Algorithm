@@ -41,6 +41,8 @@ class Solution {
         
         return answer;
     }
+    
+    // 깊이우선탐색(DFS) 방식 사용하여 송전탑 개수 체크
     static void dfs(int prev) {
         for(int j = 1; j < map[prev].length; j++) {
         	// 두 송전탑이 연결되어 있고, j번 송전탑을 방문한 적 없다면
