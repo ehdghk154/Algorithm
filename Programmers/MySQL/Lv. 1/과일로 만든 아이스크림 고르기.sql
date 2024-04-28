@@ -1,0 +1,30 @@
+/**
+ * 과일로 만든 아이스크림 고르기(Lv. 1)
+ * https://school.programmers.co.kr/learn/courses/30/lessons/133025
+ */
+
+-- JOIN 사용 X
+SELECT 
+	A.FLAVOR 
+FROM 
+	FIRST_HALF A, ICECREAM_INFO B
+WHERE 
+	A.FLAVOR = B.FLAVOR
+    AND A.TOTAL_ORDER > 3000
+    AND INGREDIENT_TYPE = 'fruit_based'
+ORDER BY 
+	A.TOTAL_ORDER DESC
+	
+-- JOIN 사용 O
+SELECT 
+	FLAVOR 
+FROM 
+	FIRST_HALF 
+	JOIN ICECREAM_INFO 
+	USING(FLAVOR)
+WHERE 
+	TOTAL_ORDER > 3000
+    AND INGREDIENT_TYPE = 'fruit_based'
+ORDER BY 
+	TOTAL_ORDER DESC
+	
