@@ -1,0 +1,42 @@
+/**
+ * 즐겨찾기가 가장 많은 식당 정보 출력하기(Lv. 3)
+ * https://school.programmers.co.kr/learn/courses/30/lessons/131123
+ */
+
+-- JOIN 사용X (WHERE)
+SELECT 
+	A.FOOD_TYPE, A.REST_ID, A.REST_NAME, A.FAVORITES
+FROM 
+	REST_INFO A, 
+	(SELECT 
+		MAX(FAVORITES) AS FAVORITES 
+	 FROM 
+		REST_INFO 
+	 GROUP BY 
+	 	FOOD_TYPE) B
+WHERE 
+	A.FAVORITES = B.FAVORITES
+GROUP BY 
+	FOOD_TYPE
+ORDER BY 
+	FOOD_TYPE DESC
+	
+-- JOIN 사용
+SELECT 
+	A.FOOD_TYPE, A.REST_ID, A.REST_NAME, A.FAVORITES
+FROM 
+	REST_INFO A 
+	JOIN 
+	(SELECT 
+  	     MAX(FAVORITES) 
+     AS 
+  	     FAVORITES 
+     FROM 
+  	     REST_INFO 
+     GROUP BY 
+  	     FOOD_TYPE) B
+    ON A.FAVORITES = B.FAVORITES
+GROUP BY 
+	FOOD_TYPE
+ORDER BY 
+	FOOD_TYPE DESC
